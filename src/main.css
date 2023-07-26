@@ -109,6 +109,11 @@ li::marker {
   color: rgb(var(--color-accent));
   background-color: rgb(var(--color-button));
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(var(--color-button-shadow)) 2px 2px 0px 0px inset;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;     
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .link-button:hover {
