@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ibm-plex-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/ibm-plex-mono.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* ibm-plex-mono-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/ibm-plex-mono-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* jetbrains-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/jetbrains-mono.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* jetbrains-mono-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/jetbrains-mono-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* jetbrains-mono-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/jetbrains-mono-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* silkscreen-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Silkscreen';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/silkscreen.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* mondwest-regular */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Mondwest';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/mondwest.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  --color-accent: 240, 90, 60;
+  --color-background: 255, 255, 255;
+  --color-dots: 221, 221, 221, 0.6;
+  --color-button: 242, 242, 242;
+  --color-button-shadow: 0, 0, 0, 0.1;
+}
+
+body {
+  /* background-image: radial-gradient(circle at center, rgb(var(--color-dots)) 2px, transparent 0); */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17px' height='17px' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='16' cy='16' r='0.88' fill='rgba(221,221,221,0.6)' /%3E%3C/svg%3E%0A");
+  background-size: 40px 40px;
+  background-position: -18px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: 36, 36, 36;
+    --color-dots: 255, 255, 255, 0.12;
+    --color-button: 60, 60, 60;
+    --color-button-shadow: 255, 255, 255, 0.2;
+  }
+
+  body {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17px' height='17px' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='16' cy='16' r='0.88' fill='rgba(255,255,255,0.1)' /%3E%3C/svg%3E%0A");
+  }
+}
+
+li::marker {
+  font-family: 'Silkscreen';
+}
+
+.link-button {
+  font-family: 'JetBrains Mono';
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 2px 4px 0px 6px;
+  border-radius: 4px;
+  color: rgb(var(--color-accent));
+  background-color: rgb(var(--color-button));
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(var(--color-button-shadow)) 2px 2px 0px 0px inset;
+}
+
+.link-button:hover {
+  position: relative;
+  left: 0px;
+  top: 1px;
+  padding: 3px 4px 0px 7px;
+  margin: 0px -1px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(var(--color-button-shadow)) 3px 3px 0px 0px inset;
+}
+
+.link-button:active {
+  position: relative;
+  left: 0px;
+  top: -1px;
+  padding: 0px 4px 0px 4px;
+  margin: 0px 2px 0px 0px;
+  box-shadow: none;
+}
+
+/* .link-button {
+  font-family: 'JetBrains Mono';
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0px 4px 0px 6px;
+  border-radius: 4px;
+  color: rgb(var(--color-accent));
+  background-color: rgb(var(--button-color));
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(var(--button-shadow)) 2px -2px 0px 0px inset;
+}
+
+.link-button:hover {
+  position: relative;
+  left: 0px;
+  bottom: 1px;
+  padding: 0px 4px 1px 7px;
+  margin: 0px -1px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(var(--button-shadow)) 2px -2px 0px 1px inset;
+}
+
+.link-button:active {
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  padding: 0px 4px 0px 4px;
+  margin: 0px 2px 0px 0px;
+  box-shadow: none;
+} */

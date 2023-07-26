@@ -1,15 +1,35 @@
 ---
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <main class="flex min-h-screen flex-col items-center p-8 md:p-24">
+    <div class="w-full max-w-2xl text-2xl md:text-3xl lg:text-4xl font-medium">
+      <h1>👋 HEY! I&apos;M <span class="text-3xl md:text-4xl lg:text-5xl font-pixel text-accent">Brian Ho</span></h1>
+    </div>
+    <div class="w-full max-w-2xl text-sm/6 md:text-base lg:text-lg">
+      <ul class="m-4 list-bracket md:space-y-2">
+        <li>I&apos;M AN ENGINEER FOCUSED ON CRYPTO AND WEB3.</li>
+        <li>BASED IN SAN FRANCISCO, CA.</li>
+        <li>INTERESTED IN X, Y, AND Z.</li>
+        <li>PREVIOUSLY WORKED AT:</li>
+        <ul class="space-y-1">
+          <li>📊 <a class="link-button ">MESSARI</a> (ON-CHAIN DATA), INDEXING BLOCKCHAIN DATA FOR VARIOUS PROTOCOLS VIA STANDARDIZED SUBGRAPHS</li>
+          <li>👀 <a class="link-button">DAPPER LABS</a> (FLOW), BUILDING DEVELOPER TOOLING FOR THE FLOW SDK</li>
+          <li>🌀 <a class="link-button">CONSENSYS</a> (BOUNTIES NETWORK), DERIVING ANALYTICS FOR THE BOUNTIES EXPLORER</li>
+        </ul>
+        <li>STUDIED EECS + ECONOMICS AT <a class="link-button">UC BERKELEY</a> AND WAS ACTIVELY INVOLVED WITH THESE STUDENT ORGS:</li>
+        <ul class="space-y-1">
+          <li>⛓️ <a class="link-button">BLOCKCHAIN @ BERKELEY</a>, TAUGHT THE BLOCKCHAIN FUNDAMENTALS DECAL</li>
+          <li>🪄 <a class="link-button">INNOVATIVE DESIGN</a>, LED WEB VARIOUS DEVELOPMENT INITIATIVES (UI/UX + ANIMATIONS)</li>
+        </ul>
+        <li>SOME UNREFINED SIDE PROJECTS:</li>
+        <ul class="space-y-1">
+          <li>🍕 <a class="link-button">SLIVER.TODAY</a>, A DAILY PIZZA API FOR SLIVER PIZZERIA</li>
+          <li>🔍 <a class="link-button">NFTY.FUN</a>, A RETRO-THEMED NFT EXPLORER</li>
+        </ul>
+        <li><a class="link-button">@MRBRIANHOBO</a> OR <a class="link-button">BRIAN.HO@SKIFF.COM</a></li>
+      </ul>
+    </div>
+  </main>
+</Layout>
