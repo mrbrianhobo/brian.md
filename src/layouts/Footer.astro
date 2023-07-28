@@ -1,0 +1,24 @@
+---
+const commit = { hash: '', url: '', date: '' };
+const res = await fetch(
+  'https://api.github.com/repos/mrbrianhobo/sliver.today/commits'
+);
+if (res.ok) {
+  const data = await res.json();
+  const lastCommit = data[0];
+
+  const commitDate = lastCommit.commit.committer.date;
+  const date = new Date(commitDate);
+  const dateString = date.toDateString().slice(4, date.toDateString().length);
+
+  commit.hash = lastCommit.sha.slice(0,7);
+  commit.url = lastCommit.html_url;
+  commit.date = dateString;
+}
+---
+
+<div class="flex w-full flex-row justify-between text-muted">
+  <div class="m-6 text-xs sm:text-sm md:text-base">
+    {res.ok ? <p>LAST UPDATE: <a class="link-button" href={commit.url} target="_blank"><button>{commit.hash}</button></a> ON {commit.date}</p> : <p></p>}
+  </div>
+</div>

@@ -14,12 +14,11 @@ const ThemeToggle: React.FC<{}> = () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
-    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
     <div className="m-4">
-      <button onClick={handleClick} className="w-10 h-10 text-3xl font-pixel">
+      <button onClick={handleClick} className="w-10 h-10 text-4xl font-pixel">
       {theme === "light" ? "☽" : "☀"}
       </button>
     </div>

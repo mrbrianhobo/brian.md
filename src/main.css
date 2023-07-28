@@ -68,6 +68,8 @@
 :root {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  --color-body: 38, 38, 38;
+  --color-body-dark: 255, 255, 255;
   --color-accent: 240, 90, 60;
   --color-muted: 139, 139, 139;
   --color-background: 255, 255, 255;
@@ -76,27 +78,36 @@
   --color-button-dark: 60, 60, 60;
   --color-button-shadow: 0, 0, 0, 0.1;
   --color-button-shadow-dark: 255, 255, 255, 0.2;
+  --color-toast: 255, 255, 255;
+  --color-toast-dark: 60, 60, 60;
   --image-dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17px' height='17px' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='16' cy='16' r='0.88' fill='rgba(221,221,221,0.6)' /%3E%3C/svg%3E%0A");
   --image-dots-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17px' height='17px' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='16' cy='16' r='0.88' fill='rgba(255,255,255,0.1)' /%3E%3C/svg%3E%0A");
+  --box-shadow-toast-dark: 0 3px 10px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.15);
 }
 
 html {
+  --body: var(--color-body);
   --background: var(--color-background);
   --dots: var(--image-dots);
   --button: var(--color-button);
-  --button-shadow: var(--color-button-shadow)
+  --button-shadow: var(--color-button-shadow);
+  --toast: var(--color-toast);
 }
 
 html.dark {
+  --body: var(--color-body-dark);
   --background: var(--color-background-dark);
   --dots: var(--image-dots-dark);
   --button: var(--color-button-dark);
-  --button-shadow: var(--color-button-shadow-dark)
+  --button-shadow: var(--color-button-shadow-dark);
+  --toast: var(--color-toast-dark);
 }
 
 body {
-  background-size: 40px 40px;
-  background-position: -18px;
+  background-size: 36px 36px;
+  background-position: -1rem -1rem;
+  /* background-size: 40px 40px; */
+  /* background-position: -18px; */
 }
 
 li::marker {

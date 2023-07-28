@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../layouts/Header.astro';
+import Footer from '../layouts/Footer.astro';
+import ClipboardButton from '../components/ClipboardButton';
 ---
 
 <Layout>
   <Header />
-  <main class="flex min-h-screen flex-col items-center p-8 md:p-24">
+  <main class="flex flex-col items-center p-8 md:p-24">
     <div class="w-full max-w-2xl text-2xl md:text-3xl lg:text-4xl font-medium">
       <h1>👋 HEY! I&apos;M <span class="text-3xl md:text-4xl lg:text-5xl font-pixel text-accent">Brian Ho</span></h1>
     </div>
@@ -13,25 +15,29 @@ import Header from '../layouts/Header.astro';
       <ul class="m-4 list-bracket md:space-y-2">
         <li>I&apos;M AN ENGINEER FOCUSED ON CRYPTO AND WEB3.</li>
         <li>BASED IN SAN FRANCISCO, CA.</li>
+        <ul class="py-1.5 text-muted">
+          <li>📍 LAST SEEN 20 HOURS AGO, AT NOTION HQ IN SAN FRANCISCO.</li>
+        </ul>
         <li>INTERESTED IN X, Y, AND Z.</li>
         <li>PREVIOUSLY WORKED AT:</li>
         <ul class="space-y-1">
-          <li>📊 <a class="link-button "><button>MESSARI</button></a> (ON-CHAIN DATA), INDEXING BLOCKCHAIN DATA FOR VARIOUS PROTOCOLS VIA STANDARDIZED SUBGRAPHS</li>
-          <li>👀 <a class="link-button"><button>DAPPER LABS</button></a> (FLOW), BUILDING DEVELOPER TOOLING FOR THE FLOW SDK</li>
-          <li>🌀 <a class="link-button"><button>CONSENSYS</button></a> (BOUNTIES NETWORK), DERIVING ANALYTICS FOR THE BOUNTIES EXPLORER</li>
+          <li>📊 <a class="link-button" href="https://messari.io" target="_blank"><button>MESSARI</button></a> (ON-CHAIN DATA), INDEXING BLOCKCHAIN DATA FOR VARIOUS PROTOCOLS VIA STANDARDIZED SUBGRAPHS</li>
+          <li>👀 <a class="link-button" href="https://www.dapperlabs.com" target="_blank"><button>DAPPER LABS</button></a> (FLOW), BUILDING DEVELOPER TOOLING FOR THE FLOW SDK</li>
+          <li>🌀 <a class="link-button" href="https://consensys.io" target="_blank"><button>CONSENSYS</button></a> (BOUNTIES NETWORK), DERIVING ANALYTICS FOR THE BOUNTIES EXPLORER</li>
         </ul>
-        <li>STUDIED EECS + ECONOMICS AT <a class="link-button"><button>UC BERKELEY</button></a> AND WAS ACTIVELY INVOLVED WITH THESE STUDENT ORGS:</li>
+        <li>STUDIED EECS + ECONOMICS AT <a class="link-button" href="https://www.berkeley.edu" target="_blank"><button>UC BERKELEY</button></a> AND WAS ACTIVELY INVOLVED WITH THESE STUDENT ORGS:</li>
         <ul class="space-y-1">
-          <li>⛓️ <a class="link-button"><button>BLOCKCHAIN @ BERKELEY</button></a>, TAUGHT THE BLOCKCHAIN FUNDAMENTALS DECAL</li>
-          <li>🪄 <a class="link-button"><button>INNOVATIVE DESIGN</button></a>, LED WEB VARIOUS DEVELOPMENT INITIATIVES (UI/UX + ANIMATIONS)</li>
+          <li>⛓️ <a class="link-button" href="https://blockchain.berkeley.edu" target="_blank"><button>BLOCKCHAIN @ BERKELEY</button></a>, TAUGHT THE BLOCKCHAIN FUNDAMENTALS DECAL</li>
+          <li>🪄 <a class="link-button" href="https://www.innovativedesign.club" target="_blank"><button>INNOVATIVE DESIGN</button></a>, LED WEB VARIOUS DEVELOPMENT INITIATIVES (UI/UX + ANIMATIONS)</li>
         </ul>
         <li>SOME UNREFINED SIDE PROJECTS:</li>
         <ul class="space-y-1">
-          <li>🍕 <a class="link-button"><button>SLIVER.TODAY</button></a>, A DAILY PIZZA API FOR SLIVER PIZZERIA</li>
-          <li>🔍 <a class="link-button"><button>NFTY.FUN</button></a>, A RETRO-THEMED NFT EXPLORER</li>
+          <li>🍕 <a class="link-button" href="https://sliver.today" target="_blank"><button>SLIVER.TODAY</button></a>, A DAILY PIZZA API FOR SLIVER PIZZERIA</li>
+          <li>🔍 <a class="link-button" href="https://nfty.fun" target="_blank"><button>NFTY.FUN</button></a>, A RETRO-THEMED NFT EXPLORER</li>
         </ul>
-        <li><a class="link-button"><button>@MRBRIANHOBO</button></a> OR <a class="link-button"><button>BRIAN.HO@SKIFF.COM</button></a></li>
+        <li><a class="link-button" href="https://twitter.com/mrbrianhobo" target="_blank"><button>@MRBRIANHOBO</button></a> OR <a class="link-button"><ClipboardButton text={"brian.ho@skiff.com"} client:only="react" /></a></li>
       </ul>
     </div>
   </main>
+  <Footer />
 </Layout>
