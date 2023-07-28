@@ -18,9 +18,11 @@ const ThemeToggle: React.FC<{}> = () => {
 
   return (
     <div className="m-4">
-      <button onClick={handleClick} className="w-10 h-10 text-4xl font-pixel">
-      {theme === "light" ? "☽" : "☀"}
-      </button>
+      <div className="rounded-md hover:bg-background">
+        <button onClick={handleClick} className="w-10 h-10 rounded-md text-4xl font-pixel hover:bg-muted/10 hover:ease-in duration-150">
+          {theme === "light" ? "☽" : "☀"}
+        </button>
+      </div>
     </div>
   )
 }

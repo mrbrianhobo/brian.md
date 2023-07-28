@@ -68,18 +68,18 @@
 :root {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  --color-body: 38, 38, 38;
-  --color-body-dark: 255, 255, 255;
-  --color-accent: 240, 90, 60;
-  --color-muted: 139, 139, 139;
-  --color-background: 255, 255, 255;
-  --color-background-dark: 36, 36, 36;
-  --color-button: 242, 242, 242;
-  --color-button-dark: 60, 60, 60;
+  --color-body: 38 38 38;
+  --color-body-dark: 255 255 255;
+  --color-accent: 240 90 60;
+  --color-muted: 139 139 139;
+  --color-background: 255 255 255;
+  --color-background-dark: 36 36 36;
+  --color-button: 242 242 242;
+  --color-button-dark: 60 60 60;
   --color-button-shadow: 0, 0, 0, 0.1;
   --color-button-shadow-dark: 255, 255, 255, 0.2;
-  --color-toast: 255, 255, 255;
-  --color-toast-dark: 60, 60, 60;
+  --color-toast: 255 255 255;
+  --color-toast-dark: 60 60 60;
   --image-dots: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17px' height='17px' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='16' cy='16' r='0.88' fill='rgba(221,221,221,0.6)' /%3E%3C/svg%3E%0A");
   --image-dots-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17px' height='17px' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='16' cy='16' r='0.88' fill='rgba(255,255,255,0.1)' /%3E%3C/svg%3E%0A");
   --box-shadow-toast-dark: 0 3px 10px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.15);

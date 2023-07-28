@@ -13,7 +13,7 @@ if (res.ok) {
 
   commit.hash = lastCommit.sha.slice(0,7);
   commit.url = lastCommit.html_url;
-  commit.date = dateString;
+  commit.date = dateString.toLocaleUpperCase();
 }
 ---
 
