@@ -6,8 +6,13 @@ const ClipboardButton: React.FC<{
   const copyToClipboardAndNotify = async () => {
     await navigator.clipboard.writeText(text);
     toast.success('COPIED TO CLIPBOARD', {
+      duration: 100000,
       position: 'bottom-center',
-      // className: "bg-toast dark:shadow-toast text-body font-code font-normal",
+      className: "dark:shadow-toast font-code font-normal",
+      style: {
+        backgroundColor: 'rgb(var(--toast))',
+        color: 'rgb(var(--body))',
+      },
       iconTheme: {
         primary: 'rgb(var(--color-accent))',
         secondary: 'rgb(255, 255, 255)',
@@ -18,9 +23,7 @@ const ClipboardButton: React.FC<{
   return (
     <span>
       <button onClick={copyToClipboardAndNotify}>{text.toUpperCase()}</button>
-      <Toaster toastOptions={{
-        className: "bg-toast dark:shadow-toast text-body font-code font-normal",
-      }} />
+      <Toaster />
     </span>
   )
 }
