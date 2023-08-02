@@ -1,12 +1,10 @@
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
+import LinkButton from './LinkButton';
 
-const ClipboardButton: React.FC<{
-  text: string;
-}> = ({ text }) => {
+const ClipboardButton = ({ text }: { text: string }) => {
   const copyToClipboardAndNotify = async () => {
     await navigator.clipboard.writeText(text);
     toast.success('COPIED TO CLIPBOARD', {
-      duration: 100000,
       position: 'bottom-center',
       className: "dark:shadow-toast font-code font-normal",
       style: {
@@ -21,10 +19,9 @@ const ClipboardButton: React.FC<{
   }
 
   return (
-    <span>
+    <LinkButton>
       <button onClick={copyToClipboardAndNotify}>{text.toUpperCase()}</button>
-      <Toaster />
-    </span>
+    </LinkButton>
   )
 }
 

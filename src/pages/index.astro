@@ -1,8 +1,10 @@
 ---
+import { Toaster } from 'react-hot-toast';
 import Layout from '../layouts/Layout.astro';
 import Header from '../layouts/Header.astro';
 import Footer from '../layouts/Footer.astro';
 import ClipboardButton from '../components/ClipboardButton';
+import LinkButton from '../components/LinkButton';
 ---
 
 <Layout>
@@ -16,7 +18,7 @@ import ClipboardButton from '../components/ClipboardButton';
         <li>I&apos;M AN ENGINEER FOCUSED ON CRYPTO AND WEB3.</li>
         <li>BASED IN SAN FRANCISCO, CA.</li>
         <ul class="py-1.5 text-muted">
-          <li>📍 LAST SEEN 20 HOURS AGO, AT NOTION HQ IN SAN FRANCISCO.</li>
+          <li>📍 LAST SEEN 2 DAYS AGO, AT LOST RESORT IN SAN FRANCISCO.</li>
         </ul>
         <li>INTERESTED IN X, Y, AND Z.</li>
         <li>PREVIOUSLY WORKED AT:</li>
@@ -35,9 +37,13 @@ import ClipboardButton from '../components/ClipboardButton';
           <li>🍕 <a class="link-button" href="https://sliver.today" target="_blank"><button>SLIVER.TODAY</button></a>, A DAILY PIZZA API FOR SLIVER PIZZERIA</li>
           <li>🔍 <a class="link-button" href="https://nfty.fun" target="_blank"><button>NFTY.FUN</button></a>, A RETRO-THEMED NFT EXPLORER</li>
         </ul>
-        <li><a class="link-button" href="https://twitter.com/mrbrianhobo" target="_blank"><button>@MRBRIANHOBO</button></a> OR <a class="link-button"><ClipboardButton text={"brian.ho@skiff.com"} client:only="react" /></a></li>
+        <li><a class="link-button" href="https://twitter.com/mrbrianhobo" target="_blank"><button>@MRBRIANHOBO</button></a> OR <ClipboardButton client:only="react" text={"brian.ho@skiff.com"} /></li>
+        <li>
+          <a><LinkButton client:only="react" text="HELLO"/></a> WORLD <a class="link-button">HELLO</a>
+        </li>
       </ul>
     </div>
   </main>
   <Footer />
+  <Toaster client:only="react"/>
 </Layout>

@@ -114,6 +114,22 @@ li::marker {
   font-family: 'Silkscreen';
 }
 
+.test {
+  font-family: 'JetBrains Mono';
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  color: rgb(var(--color-accent));
+  background-color: rgb(var(--button));
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(var(--button-shadow)) 2px 2px 0px 0px inset;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;     
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .link-button {
   font-family: 'JetBrains Mono';
   font-weight: 500;
