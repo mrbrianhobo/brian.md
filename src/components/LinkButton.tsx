@@ -11,6 +11,9 @@ const LinkButton = ({ children, text }: Props) => {
       layout
       className="test"
       style={{
+        position: "relative",
+        left: "0px",
+        top: "0px",
         padding: "2px 4px 0px 6px",
         margin: "1px 0px 0px 1px",
         boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(var(--button-shadow)) 2px 2px 0px 0px inset",
@@ -25,7 +28,7 @@ const LinkButton = ({ children, text }: Props) => {
       }}
       whileTap={{
         position: "relative",
-        left: "2px",
+        left: "1px",
         top: "-2px",
         padding: "0px 4px 0px 4px",
         margin: "3px 3px 0px 0px",
