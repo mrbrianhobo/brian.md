@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  darkMode: "class",
+  darkMode: 'class',
 	theme: {
 		extend: {
       backgroundImage: {
@@ -19,11 +19,12 @@ module.exports = {
         accent: 'rgb(var(--color-accent))',
         muted: 'rgb(var(--color-muted))',
         toast: 'rgb(var(--toast))',
+        button: 'rgb(var(--button))',
       },
       fontFamily: {
         mono: ['"IBM Plex Mono"', ...defaultTheme.fontFamily.mono],
         code: ['"JetBrains Mono"'],
-        pixel: ["Mondwest"],
+        pixel: ['Mondwest'],
       },
       listStyleType: {
         bracket: '"> "',

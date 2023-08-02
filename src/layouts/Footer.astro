@@ -1,7 +1,9 @@
 ---
+import LinkButton from "../components/LinkButton";
+
 const commit = { hash: '', url: '', date: '' };
 const res = await fetch(
-  'https://api.github.com/repos/mrbrianhobo/sliver.today/commits'
+  'https://api.github.com/repos/mrbrianhobo/slivers.today/commits'
 );
 if (res.ok) {
   const data = await res.json();
@@ -19,6 +21,6 @@ if (res.ok) {
 
 <div class="flex w-full flex-row justify-between text-muted">
   <div class="m-6 text-xs sm:text-sm md:text-base">
-    {res.ok ? <p>LAST UPDATE: <a class="link-button" href={commit.url} target="_blank"><button>{commit.hash}</button></a> ON {commit.date}</p> : <p></p>}
+    {res.ok ? <p>LAST UPDATE: <a href={commit.url} target="_blank"><LinkButton client:only="react" text={commit.hash} /></a> ON {commit.date}</p> : null }
   </div>
 </div>

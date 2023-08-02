@@ -1,7 +1,11 @@
 import toast from 'react-hot-toast';
 import LinkButton from './LinkButton';
 
-const ClipboardButton = ({ text }: { text: string }) => {
+type Props = {
+  text: string
+}
+
+const ClipboardButton = ({ text }: Props) => {
   const copyToClipboardAndNotify = async () => {
     await navigator.clipboard.writeText(text);
     toast.success('COPIED TO CLIPBOARD', {
@@ -19,9 +23,10 @@ const ClipboardButton = ({ text }: { text: string }) => {
   }
 
   return (
-    <LinkButton>
-      <button onClick={copyToClipboardAndNotify}>{text.toUpperCase()}</button>
-    </LinkButton>
+    <LinkButton
+      onClick={copyToClipboardAndNotify}
+      text={text.toUpperCase()}
+    />
   )
 }
 

@@ -18,15 +18,17 @@ const ThemeToggle = () => {
 
   return (
     <motion.div
-      className="m-4"
-      whileHover={{ backgroundColor: "rgb(var(--background))" }}
-      whileTap={{ scale: 0.9 }}
-    >
-      <div className="rounded-md">
-        <button onClick={handleClick} className="w-10 h-10 rounded-md text-4xl font-pixel hover:bg-muted/10 hover:ease-in duration-150">
-          {theme === "light" ? "☽" : "☀"}
-        </button>
-      </div>
+      className="m-4 rounded-md"
+      whileHover={{ background: "rgb(var(--background))" }}
+    > 
+      <motion.button
+        className="w-10 h-10 rounded-md text-4xl font-pixel"
+        onClick={handleClick}
+        whileHover={{ background: "rgb(var(--color-muted) / 0.1)" }}
+        whileTap={{ scale: 0.9 }}
+      >
+        {theme === "light" ? "☽" : "☀"}
+      </motion.button>
     </motion.div>
   )
 }

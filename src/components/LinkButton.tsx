@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
 
 type Props = {
-  children?: React.ReactNode
-  text?: string
+  onClick?: () => void
+  text: string
 }
 
-const LinkButton = ({ children, text }: Props) => {
+const LinkButton = ({ onClick, text }: Props) => {
   return (
     <motion.button
       layout
-      className="test"
+      className="relative rounded bg-button font-code font-medium text-accent no-underline whitespace-nowrap select-none"
+      onClick={onClick}
       style={{
-        position: "relative",
         left: "0px",
         top: "0px",
         padding: "2px 4px 0px 6px",
@@ -19,7 +19,6 @@ const LinkButton = ({ children, text }: Props) => {
         boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(var(--button-shadow)) 2px 2px 0px 0px inset",
       }}
       whileHover={{
-        position: "relative",
         left: "0px",
         top: "1px",
         padding: "3px 4px 0px 7px",
@@ -27,16 +26,15 @@ const LinkButton = ({ children, text }: Props) => {
         boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(var(--button-shadow)) 3px 3px 0px 0px inset",
       }}
       whileTap={{
-        position: "relative",
         left: "1px",
         top: "-2px",
         padding: "0px 4px 0px 4px",
         margin: "3px 3px 0px 0px",
-        boxShadow: "none",
+        boxShadow: "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(var(--button-shadow)) 0px 0px 0px 0px inset",
       }}
       transition={{ duration: 0 }}
     >
-      {children != undefined ? children : text}
+      {text}
     </motion.button>
   )
 }
