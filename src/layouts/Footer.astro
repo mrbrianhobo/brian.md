@@ -3,7 +3,7 @@ import LinkButton from "../components/LinkButton";
 
 const commit = { hash: '', url: '', date: '' };
 const res = await fetch(
-  'https://api.github.com/repos/mrbrianhobo/slivers.today/commits'
+  'https://api.github.com/repos/mrbrianhobo/brian.md/commits'
 );
 if (res.ok) {
   const data = await res.json();
@@ -15,7 +15,7 @@ if (res.ok) {
 
   commit.hash = lastCommit.sha.slice(0,7);
   commit.url = lastCommit.html_url;
-  commit.date = dateString.toLocaleUpperCase();
+  commit.date = dateString.toUpperCase();
 }
 ---
 
