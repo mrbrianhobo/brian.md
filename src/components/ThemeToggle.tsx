@@ -20,12 +20,12 @@ const ThemeToggle = () => {
     <motion.div
       className="m-4 rounded-md"
       whileHover={{ background: "rgb(var(--background))" }}
+      whileTap={{ scale: 0.9 }}
     > 
       <motion.button
         className="w-10 h-10 rounded-md text-4xl font-pixel"
         onClick={handleClick}
         whileHover={{ background: "rgb(var(--color-muted) / 0.1)" }}
-        whileTap={{ scale: 0.9 }}
       >
         {theme === "light" ? "☽" : "☀"}
       </motion.button>
