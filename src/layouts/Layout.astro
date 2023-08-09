@@ -1,5 +1,6 @@
 ---
 import '../main.css'
+const ogImage = new URL('/banner-dark.png', Astro.url);
 ---
 
 <!DOCTYPE html>
@@ -17,14 +18,14 @@ import '../main.css'
     <meta property="og:url" content="https://brian.md" />
     <meta property="og:title" content="Brian Ho" />
     <meta property="og:description" content="" />
-    <meta property="og:image" content="https://brian.md/banner-dark.png" />
+    <meta property="og:image" content={ogImage} />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Brian Ho" />
     <meta property="twitter:description" content="" />
-    <meta property="twitter:image" content="https://brian.md/banner-dark.png" />
+    <meta property="twitter:image" content={ogImage} />
   </head>
-  <body class="bg-background bg-dots font-mono text-body">
+  <body class="flex min-h-screen flex-col bg-background bg-dots font-mono text-body">
     <slot />
   </body>
 </html>

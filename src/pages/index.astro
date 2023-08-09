@@ -6,13 +6,38 @@ import Footer from '../layouts/Footer.astro';
 import ClipboardButton from '../components/ClipboardButton';
 import LinkButton from '../components/LinkButton';
 import LastCheckin from '../components/LastCheckin';
+import { MotionSpan } from '../components/MotionWrapper';
+
+const variants = {
+  initial: {
+    rotate: [4, 14, -8, 14, -4, 10, 0],
+  },
+  hover: {
+    rotate: [4, 18, -12, 18, -8, 14, 4],
+    transition: { duration: 0.75 },
+  },
+  tap: {
+    rotate: [0, 14, -8, 14, -4, 10, 0],
+  }
+}
 ---
 
 <Layout>
   <Header />
-  <main class="flex flex-col items-center p-8 md:p-24">
+  <main class="flex grow flex-col items-center p-8 md:p-24">
     <div class="w-full max-w-2xl text-2xl md:text-3xl lg:text-4xl font-medium">
-      <h1><span class="cursor-grab">👋</span> HEY! I&apos;M <span class="text-3xl md:text-4xl lg:text-5xl font-pixel text-accent">Brian Ho</span></h1>
+      <h1>
+        <MotionSpan 
+          client:load
+          className="inline-block origin-bottom-right cursor-grab"
+          animate="initial"
+          whileHover="hover"
+          whileTap="tap"
+          variants={variants}
+        >
+          👋
+        </MotionSpan> HEY! I'M <span class="text-3xl md:text-4xl lg:text-5xl font-pixel text-accent">Brian Ho</span>
+      </h1>
     </div>
     <div class="w-full max-w-2xl text-sm/6 md:text-base lg:text-lg">
       <ul class="m-4 list-bracket md:space-y-2">
@@ -24,24 +49,24 @@ import LastCheckin from '../components/LastCheckin';
         <li>INTERESTED IN X, Y, AND Z.</li>
         <li>PREVIOUSLY WORKED AT:</li>
         <ul class="space-y-1">
-          <li>📊 <a href="https://messari.io" target="_blank"><LinkButton client:only="react" text="MESSARI"/></a> (<a class="font-code font-medium text-accent cursor-pointer hover:bg-accent/10 hover:ease-in duration-150" href="https://messari.io/protocol-explorer/all-protocols" target="_blank">ON-CHAIN DATA</a>), INDEXING BLOCKCHAIN DATA FOR VARIOUS PROTOCOLS VIA STANDARDIZED SUBGRAPHS</li>
-          <li>👀 <a href="https://www.dapperlabs.com" target="_blank"><LinkButton client:only="react" text="DAPPER LABS"/></a> (<a class="font-code font-medium text-accent cursor-pointer hover:bg-accent/10 hover:ease-in duration-150" href="https://flow.com" target="_blank">FLOW</a>), BUILDING DEVELOPER TOOLING FOR THE FLOW SDK</li>
-          <li>🌀 <a href="https://consensys.io" target="_blank"><LinkButton client:only="react" text="CONSENSYS"/></a> (<a class="font-code font-medium text-accent cursor-pointer hover:bg-accent/10 hover:ease-in duration-150" href="https://bounties.network" target="_blank">BOUNTIES NETWORK</a>), DERIVING ANALYTICS FOR THE BOUNTIES EXPLORER</li>
+          <li>📊 <a href="https://messari.io" target="_blank"><LinkButton client:load text="MESSARI"/></a> (<a class="font-code font-medium text-accent cursor-pointer hover:bg-accent/10 hover:ease-in duration-150" href="https://messari.io/protocol-explorer/all-protocols" target="_blank">ON-CHAIN DATA</a>), INDEXING BLOCKCHAIN DATA FOR VARIOUS PROTOCOLS VIA STANDARDIZED SUBGRAPHS</li>
+          <li>👀 <a href="https://www.dapperlabs.com" target="_blank"><LinkButton client:load text="DAPPER LABS"/></a> (<a class="font-code font-medium text-accent cursor-pointer hover:bg-accent/10 hover:ease-in duration-150" href="https://flow.com" target="_blank">FLOW</a>), BUILDING DEVELOPER TOOLING FOR THE FLOW SDK</li>
+          <li>🌀 <a href="https://consensys.io" target="_blank"><LinkButton client:load text="CONSENSYS"/></a> (<a class="font-code font-medium text-accent cursor-pointer hover:bg-accent/10 hover:ease-in duration-150" href="https://bounties.network" target="_blank">BOUNTIES NETWORK</a>), DERIVING ANALYTICS FOR THE BOUNTIES EXPLORER</li>
         </ul>
-        <li>STUDIED EECS + ECONOMICS AT <a href="https://www.berkeley.edu" target="_blank"><LinkButton client:only="react" text="UC BERKELEY"/></a> AND WAS ACTIVELY INVOLVED WITH THESE STUDENT ORGS:</li>
+        <li>STUDIED EECS + ECONOMICS AT <a href="https://www.berkeley.edu" target="_blank"><LinkButton client:load text="UC BERKELEY"/></a> AND WAS ACTIVELY INVOLVED WITH THESE STUDENT ORGS:</li>
         <ul class="space-y-1">
-          <li>⛓️ <a href="https://blockchain.berkeley.edu" target="_blank"><LinkButton client:only="react" text="BLOCKCHAIN @ BERKELEY"/></a>, TAUGHT THE BLOCKCHAIN FUNDAMENTALS DECAL</li>
-          <li>🪄 <a href="https://www.innovativedesign.club" target="_blank"><LinkButton client:only="react" text="INNOVATIVE DESIGN"/></a>, LED WEB VARIOUS DEVELOPMENT INITIATIVES (UI/UX + ANIMATIONS)</li>
+          <li>⛓️ <a href="https://blockchain.berkeley.edu" target="_blank"><LinkButton client:load text="BLOCKCHAIN @ BERKELEY"/></a>, TAUGHT THE BLOCKCHAIN FUNDAMENTALS DECAL</li>
+          <li>🪄 <a href="https://www.innovativedesign.club" target="_blank"><LinkButton client:load text="INNOVATIVE DESIGN"/></a>, LED WEB VARIOUS DEVELOPMENT INITIATIVES (UI/UX + ANIMATIONS)</li>
         </ul>
         <li>SOME UNREFINED SIDE PROJECTS:</li>
         <ul class="space-y-1">
-          <li>🍕 <a href="https://sliver.today" target="_blank"><LinkButton client:only="react" text="SLIVER.TODAY"/></a>, A DAILY PIZZA API FOR SLIVER PIZZERIA</li>
-          <li>🔍 <a href="https://nfty.fun" target="_blank"><LinkButton client:only="react" text="NFTY.FUN"/></a>, A RETRO-THEMED NFT EXPLORER</li>
+          <li>🍕 <a href="https://sliver.today" target="_blank"><LinkButton client:load text="SLIVER.TODAY"/></a>, A DAILY PIZZA API FOR SLIVER PIZZERIA</li>
+          <li>🔍 <a href="https://nfty.fun" target="_blank"><LinkButton client:load text="NFTY.FUN"/></a>, A RETRO-THEMED NFT EXPLORER</li>
         </ul>
-        <li><a href="https://twitter.com/mrbrianhobo" target="_blank"><LinkButton client:only="react" text="@MRBRIANHOBO"/></a> OR <ClipboardButton client:only="react" text="brian.ho@skiff.com"/></li>
+        <li><a href="https://twitter.com/mrbrianhobo" target="_blank"><LinkButton client:load text="@MRBRIANHOBO"/></a> OR <ClipboardButton client:load text="brian.ho@skiff.com"/></li>
       </ul>
     </div>
   </main>
   <Footer />
-  <Toaster client:only="react"/>
+  <Toaster client:only="react" />
 </Layout>

@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../layouts/Header.astro';
+import Footer from '../layouts/Footer.astro';
+---
+
+<Layout>
+  <Header />
+  <main class="flex grow flex-col items-center p-8 md:p-24">
+    <div class="w-full max-w-2xl text-2xl md:text-3xl lg:text-4xl font-medium">
+      <h1><span class="bg-button rounded px-1.5 font-code text-accent">404</span> ERROR: NOT FOUND</h1>
+    </div>
+    <div class="w-full max-w-2xl m-4 text-sm/6 md:text-base lg:text-lg md:space-y-2">
+      <p>HMM... LOOKS LIKE THERE'S NOTHING HERE.</p>
+      <p>WOULD YOU LIKE TO RETURN? <span class="hover:bg-background"><a class="font-code font-medium text-accent cursor-pointer p-1 hover:bg-accent/10 hover:rounded hover:ease-in duration-150" href="/">GO HOME ↩</a></span></p>
+    </div>
+  </main>
+  <Footer />
+</Layout>
