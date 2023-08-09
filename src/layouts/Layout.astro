@@ -8,6 +8,7 @@ const ogImage = new URL('/banner-dark.png', Astro.url);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/ratz.png" />
     <link rel="icon" type="image/svg+xml" href="/ratz.svg" />
     <!-- Primary Meta Tags -->
@@ -24,6 +25,17 @@ const ogImage = new URL('/banner-dark.png', Astro.url);
     <meta property="twitter:title" content="Brian Ho" />
     <meta property="twitter:description" content="" />
     <meta property="twitter:image" content={ogImage} />
+    <!-- Analytics -->
+    <script type="text/partytown" src="https://analytics.umami.is/script.js" data-website-id="aa6e387c-dfcd-4e5b-8f31-d3bdbac89204"></script>
+    <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-W44FJPG9W2"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-W44FJPG9W2');
+    </script>
+    </script>
   </head>
   <body class="flex min-h-screen flex-col bg-background bg-dots font-mono text-body">
     <slot />

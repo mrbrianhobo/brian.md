@@ -21,12 +21,6 @@ export const prerender = false;
           </a>
         </span>
       </p>
-      <h1>The current URL is: {Astro.url}</h1>
-      <h1>The current URL pathname is: {Astro.url.pathname}</h1>
-      <h1>The current URL origin is: {Astro.url.origin}</h1>
-      <h1>The current site: {Astro.site}</h1>
-      <p>Received a {Astro.request.method} request to "{Astro.request.url}".</p>
-      <p>Received request headers: <code>{JSON.stringify(Object.fromEntries(Astro.request.headers))}</code></p>
     </div>
   </main>
   <Footer />
