@@ -1,5 +1,8 @@
 ---
 import '../main.css'
+
+const UMAMI_ANALYTICS_WEBSITE_ID = import.meta.env.UMAMI_ANALYTICS_WEBSITE_ID;
+const GOOGLE_ANALYTICS_ID = import.meta.env.GOOGLE_ANALYTICS_ID;
 ---
 
 <!DOCTYPE html>
@@ -22,14 +25,14 @@ import '../main.css'
     <meta property="twitter:title" content="Brian Ho" />
     <meta property="twitter:image" content="https://brian.md/banner.png" />
     <!-- Analytics -->
-    <script type="text/partytown" src="https://analytics.umami.is/script.js" data-website-id={import.meta.env.UMAMI_ANALYTICS_WEBSITE_ID}></script>
-    <script type="text/partytown" src=`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.GOOGLE_ANALYTICS_ID}`></script>
+    <script type="text/partytown" src="https://analytics.umami.is/script.js" data-website-id={UMAMI_ANALYTICS_WEBSITE_ID}></script>
+    <script type="text/partytown" src=`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`></script>
     <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', import.meta.env.GOOGLE_ANALYTICS_ID);
+      gtag('config', GOOGLE_ANALYTICS_ID);
     </script>
   </head>
   <body class="flex min-h-screen flex-col bg-background bg-dots font-mono text-body">
