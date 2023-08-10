@@ -1,6 +1,5 @@
 ---
 import '../main.css'
-const ogImage = new URL('/banner.png', Astro.url);
 ---
 
 <!DOCTYPE html>
@@ -17,11 +16,11 @@ const ogImage = new URL('/banner.png', Astro.url);
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://brian.md" />
     <meta property="og:title" content="Brian Ho" />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content="https://brian.md/banner.png" />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Brian Ho" />
-    <meta property="twitter:image" content={ogImage} />
+    <meta property="twitter:image" content="https://brian.md/banner.png" />
     <!-- Analytics -->
     <script type="text/partytown" src="https://analytics.umami.is/script.js" data-website-id="aa6e387c-dfcd-4e5b-8f31-d3bdbac89204"></script>
     <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-W44FJPG9W2"></script>
