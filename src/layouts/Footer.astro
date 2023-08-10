@@ -20,7 +20,7 @@ if (res.ok) {
 ---
 
 <div class="flex w-full flex-row justify-between text-muted">
-  <div class="m-6 text-xs sm:text-sm md:text-base">
-    {res.ok ? <p>LAST UPDATE: <a href={commit.url} target="_blank"><LinkButton client:only="react" text={commit.hash} /></a> ON {commit.date}</p> : null }
+  <div class="m-4 text-xs sm:text-sm md:text-base">
+    {res.ok ? <p>LAST UPDATE: <a href={commit.url} target="_blank"><LinkButton client:visible text={commit.hash} /></a> ON {commit.date}</p> : null }
   </div>
 </div>
