@@ -22,14 +22,14 @@ import '../main.css'
     <meta property="twitter:title" content="Brian Ho" />
     <meta property="twitter:image" content="https://brian.md/banner.png" />
     <!-- Analytics -->
-    <script type="text/partytown" src="https://analytics.umami.is/script.js" data-website-id="aa6e387c-dfcd-4e5b-8f31-d3bdbac89204"></script>
-    <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-W44FJPG9W2"></script>
+    <script type="text/partytown" src="https://analytics.umami.is/script.js" data-website-id={import.meta.env.UMAMI_ANALYTICS_WEBSITE_ID}></script>
+    <script type="text/partytown" src=`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`></script>
     <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-W44FJPG9W2');
+      gtag('config', `${GOOGLE_ANALYTICS_ID}`);
     </script>
   </head>
   <body class="flex min-h-screen flex-col bg-background bg-dots font-mono text-body">
