@@ -1,0 +1,41 @@
+---
+import '../main.css'
+
+const UMAMI_ANALYTICS_WEBSITE_ID = import.meta.env.UMAMI_ANALYTICS_WEBSITE_ID;
+const GOOGLE_ANALYTICS_ID = import.meta.env.GOOGLE_ANALYTICS_ID;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Primary Meta Tags -->
+    <title>Brian Ho</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://brian.md" />
+    <meta property="og:title" content="Brian Ho" />
+    <meta property="og:image" content="https://brian.md/banner.png" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Brian Ho" />
+    <meta property="twitter:image" content="https://brian.md/banner.png" />
+    <!-- Analytics -->
+    <script type="text/partytown" src="https://analytics.umami.is/script.js" data-website-id={UMAMI_ANALYTICS_WEBSITE_ID}></script>
+    <script type="text/partytown" src=`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', GOOGLE_ANALYTICS_ID);
+    </script>
+  </head>
+  <body class="flex min-h-screen flex-col bg-background bg-dots font-mono text-body">
+    <slot />
+  </body>
+</html>
