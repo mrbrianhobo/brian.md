@@ -1,9 +1,9 @@
-import toast from 'react-hot-toast';
-import LinkButton from './LinkButton';
+import toast from "react-hot-toast";
+import LinkButton from "./LinkButton";
 
 type Props = {
-  text: string
-}
+  text: string;
+};
 
 const ClipboardButton = ({ text }: Props) => {
   const copyToClipboardAndNotify = async () => {
@@ -20,14 +20,11 @@ const ClipboardButton = ({ text }: Props) => {
         secondary: "rgb(255, 255, 255)",
       },
     });
-  }
+  };
 
   return (
-    <LinkButton
-      onClick={copyToClipboardAndNotify}
-      text={text.toUpperCase()}
-    />
-  )
-}
+    <LinkButton onClick={copyToClipboardAndNotify} text={text.toUpperCase()} />
+  );
+};
 
 export default ClipboardButton;

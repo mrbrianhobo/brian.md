@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  const [theme, setTheme] = useState(
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light",
+  );
 
   const handleClick = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -21,7 +25,7 @@ const ThemeToggle = () => {
       className="m-4 rounded-md"
       whileHover={{ background: "rgb(var(--background))" }}
       whileTap={{ scale: 0.9 }}
-    > 
+    >
       <motion.button
         className="w-10 h-10 rounded-md text-4xl font-pixel"
         onClick={handleClick}
@@ -30,7 +34,7 @@ const ThemeToggle = () => {
         {theme === "light" ? "☽" : "☀"}
       </motion.button>
     </motion.div>
-  )
-}
+  );
+};
 
 export default ThemeToggle;

@@ -1,12 +1,12 @@
 ---
-import { Toaster } from 'react-hot-toast';
-import Layout from '../layouts/Layout.astro';
-import Header from '../layouts/Header.astro';
-import Footer from '../layouts/Footer.astro';
-import ClipboardButton from '../components/ClipboardButton';
-import LinkButton from '../components/LinkButton';
-import LastCheckin from '../components/LastCheckin';
-import { MotionSpan } from '../components/MotionWrapper';
+import { Toaster } from "react-hot-toast";
+import Layout from "../layouts/Layout.astro";
+import Header from "../layouts/Header.astro";
+import Footer from "../layouts/Footer.astro";
+import ClipboardButton from "../components/ClipboardButton";
+import LinkButton from "../components/LinkButton";
+import LastCheckin from "../components/LastCheckin";
+import { MotionSpan } from "../components/MotionWrapper";
 
 const variants = {
   initial: {
@@ -18,16 +18,18 @@ const variants = {
   },
   tap: {
     rotate: [0, 14, -8, 14, -4, 10, 0],
-  }
-}
+  },
+};
 ---
 
 <Layout>
   <Header />
   <main class="flex grow flex-col items-center m-8 md:m-16 lg:m-24">
-    <div class="w-full max-w-lg md:max-w-xl lg:max-w-2xl text-2xl md:text-3xl lg:text-4xl font-medium">
+    <div
+      class="w-full max-w-lg md:max-w-xl lg:max-w-2xl text-2xl md:text-3xl lg:text-4xl font-medium"
+    >
       <h1>
-        <MotionSpan 
+        <MotionSpan
           client:load
           className="inline-block origin-bottom-right cursor-grab select-none"
           animate="initial"
@@ -36,34 +38,98 @@ const variants = {
           variants={variants}
         >
           👋
-        </MotionSpan> HEY! I'M <span class="text-3xl md:text-4xl lg:text-5xl font-pixel text-accent">Brian Ho</span>
+        </MotionSpan> HEY! I'M <span
+          class="text-3xl md:text-4xl lg:text-5xl font-pixel text-accent"
+          >Brian Ho</span
+        >
       </h1>
     </div>
-    <div class="w-full max-w-lg md:max-w-xl lg:max-w-2xl m-4 md:m-8 text-sm/6 md:text-base lg:text-lg">
+    <div
+      class="w-full max-w-lg md:max-w-xl lg:max-w-2xl m-4 md:m-8 text-sm/6 md:text-base lg:text-lg"
+    >
       <ul class="list-bracket md:space-y-2">
         <li>I'M AN ENGINEER FOCUSED ON CRYPTO AND WEB3.</li>
         <li>BASED IN SAN FRANCISCO, CA.</li>
         <ul class="py-1.5 text-muted">
           <li><LastCheckin client:load /></li>
         </ul>
-        <li>INTERESTED IN BUILDING PERFORMANT SYSTEMS, DESIGNING NEW INTERFACES, AND SECURING COMPLEX PROTOCOLS.</li>
+        <li>
+          INTERESTED IN BUILDING PERFORMANT SYSTEMS, DESIGNING NEW INTERFACES,
+          AND SECURING COMPLEX PROTOCOLS.
+        </li>
         <li>PREVIOUSLY WORKED AT:</li>
         <ul class="space-y-1">
-          <li>📊 <a href="https://messari.io" target="_blank"><LinkButton client:load text="MESSARI"/></a> (<span class="hover:bg-background hover:ease-in duration-150"><a class="px-px font-code font-medium text-accent cursor-pointer hover:bg-accent/10 hover:rounded hover:ease-in duration-150" href="https://messari.io/protocol-explorer/all-protocols" target="_blank">ON-CHAIN DATA</a></span>), INDEXING BLOCKCHAIN DATA FOR VARIOUS PROTOCOLS VIA STANDARDIZED SUBGRAPHS</li>
-          <li>👀 <a href="https://www.dapperlabs.com" target="_blank"><LinkButton client:load text="DAPPER LABS"/></a> (<span class="hover:bg-background hover:ease-in duration-150"><a class="px-px font-code font-medium text-accent cursor-pointer hover:bg-accent/10 hover:rounded hover:ease-in duration-150" href="https://flow.com" target="_blank">FLOW</a></span>), BUILDING DEVELOPER TOOLING FOR THE FLOW SDK</li>
-          <li>🌀 <a href="https://consensys.io" target="_blank"><LinkButton client:load text="CONSENSYS"/></a> (<span class="hover:bg-background hover:ease-in duration-150"><a class="px-px font-code font-medium text-accent cursor-pointer hover:bg-accent/10 hover:rounded hover:ease-in duration-150" href="https://bounties.network" target="_blank">BOUNTIES NETWORK</a></span>), DERIVING ANALYTICS FOR THE BOUNTIES EXPLORER</li>
+          <li>
+            📊 <a href="https://messari.io" target="_blank"
+              ><LinkButton client:load text="MESSARI" /></a
+            > (<span class="hover:bg-background hover:ease-in duration-150"
+              ><a
+                class="px-px font-code font-medium text-accent cursor-pointer hover:bg-accent/10 hover:rounded hover:ease-in duration-150"
+                href="https://messari.io/protocol-explorer/all-protocols"
+                target="_blank">ON-CHAIN DATA</a
+              ></span
+            >), INDEXING BLOCKCHAIN DATA FOR VARIOUS PROTOCOLS VIA STANDARDIZED
+            SUBGRAPHS
+          </li>
+          <li>
+            👀 <a href="https://www.dapperlabs.com" target="_blank"
+              ><LinkButton client:load text="DAPPER LABS" /></a
+            > (<span class="hover:bg-background hover:ease-in duration-150"
+              ><a
+                class="px-px font-code font-medium text-accent cursor-pointer hover:bg-accent/10 hover:rounded hover:ease-in duration-150"
+                href="https://flow.com"
+                target="_blank">FLOW</a
+              ></span
+            >), BUILDING DEVELOPER TOOLING FOR THE FLOW SDK
+          </li>
+          <li>
+            🌀 <a href="https://consensys.io" target="_blank"
+              ><LinkButton client:load text="CONSENSYS" /></a
+            > (<span class="hover:bg-background hover:ease-in duration-150"
+              ><a
+                class="px-px font-code font-medium text-accent cursor-pointer hover:bg-accent/10 hover:rounded hover:ease-in duration-150"
+                href="https://bounties.network"
+                target="_blank">BOUNTIES NETWORK</a
+              ></span
+            >), DERIVING ANALYTICS FOR THE BOUNTIES EXPLORER
+          </li>
         </ul>
-        <li>STUDIED EECS & ECONOMICS AT <a href="https://www.berkeley.edu" target="_blank"><LinkButton client:load text="UC BERKELEY"/></a> AND WAS ACTIVELY INVOLVED WITH THESE STUDENT ORGS:</li>
+        <li>
+          STUDIED EECS & ECONOMICS AT <a
+            href="https://www.berkeley.edu"
+            target="_blank"><LinkButton client:load text="UC BERKELEY" /></a
+          > AND WAS ACTIVELY INVOLVED WITH THESE STUDENT ORGS:
+        </li>
         <ul class="space-y-1">
-          <li>⛓️ <a href="https://blockchain.berkeley.edu" target="_blank"><LinkButton client:load text="BLOCKCHAIN @ BERKELEY"/></a>, TAUGHT THE BLOCKCHAIN FUNDAMENTALS DECAL</li>
-          <li>🪄 <a href="https://www.innovativedesign.club" target="_blank"><LinkButton client:load text="INNOVATIVE DESIGN"/></a>, LED WEB VARIOUS DEVELOPMENT INITIATIVES (UI/UX & ANIMATIONS)</li>
+          <li>
+            ⛓️ <a href="https://blockchain.berkeley.edu" target="_blank"
+              ><LinkButton client:load text="BLOCKCHAIN @ BERKELEY" /></a
+            >, TAUGHT THE BLOCKCHAIN FUNDAMENTALS DECAL
+          </li>
+          <li>
+            🪄 <a href="https://www.innovativedesign.club" target="_blank"
+              ><LinkButton client:load text="INNOVATIVE DESIGN" /></a
+            >, LED WEB VARIOUS DEVELOPMENT INITIATIVES (UI/UX & ANIMATIONS)
+          </li>
         </ul>
         <li>SOME UNREFINED SIDE PROJECTS:</li>
         <ul class="space-y-1">
-          <li>🍕 <a href="https://sliver.today" target="_blank"><LinkButton client:load text="SLIVER.TODAY"/></a>, A DAILY PIZZA API FOR SLIVER PIZZERIA</li>
-          <li>🔍 <a href="https://nfty.fun" target="_blank"><LinkButton client:load text="NFTY.FUN"/></a>, A RETRO-THEMED NFT EXPLORER</li>
+          <li>
+            🍕 <a href="https://sliver.today" target="_blank"
+              ><LinkButton client:load text="SLIVER.TODAY" /></a
+            >, A DAILY PIZZA API FOR SLIVER PIZZERIA
+          </li>
+          <li>
+            🔍 <a href="https://nfty.fun" target="_blank"
+              ><LinkButton client:load text="NFTY.FUN" /></a
+            >, A RETRO-THEMED NFT EXPLORER
+          </li>
         </ul>
-        <li>REACH ME AT <a href="https://twitter.com/mrbrianhobo" target="_blank"><LinkButton client:load text="@MRBRIANHOBO"/></a> OR <ClipboardButton client:load text="brian.ho@skiff.com"/></li>
+        <li>
+          REACH ME AT <a href="https://twitter.com/mrbrianhobo" target="_blank"
+            ><LinkButton client:load text="@MRBRIANHOBO" /></a
+          > OR <ClipboardButton client:load text="brian.ho@skiff.com" />
+        </li>
       </ul>
     </div>
   </main>
