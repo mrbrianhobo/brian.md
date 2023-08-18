@@ -28,8 +28,8 @@ module.exports = {
       },
       listStyleType: {
         bracket: '"> "',
-      }
+      },
     },
-	},
-	plugins: [],
-}
+  },
+  plugins: [],
+};
