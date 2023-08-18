@@ -29,8 +29,6 @@ const LastCheckin = () => {
   if (isLoading) return "🔍 LOOKING FOR BRIAN...";
   if (error || !data) return `🪐 LAST SEEN ${time}, ${venue} IN ${location}.`;
 
-  console.log(data);
-
   time = formatDistanceToNow(new Date(data.timestamp * 1000), {
     addSuffix: true,
   }).toUpperCase();
