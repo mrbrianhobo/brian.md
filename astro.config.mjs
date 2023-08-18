@@ -15,7 +15,7 @@ export default defineConfig({
       },
     }),
   ],
-  output: 'hybrid',
+  output: 'server',
   adapter: vercel({
     analytics: true,
   }),
