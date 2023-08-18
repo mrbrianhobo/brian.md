@@ -7,17 +7,17 @@ import partytown from '@astrojs/partytown';
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    react(), 
-    tailwind(), 
+    react(),
+    tailwind(),
     partytown({
       config: {
         forward: ['dataLayer.push'],
       },
-    })
+    }),
   ],
   output: 'hybrid',
   adapter: vercel({
-    analytics: true
+    analytics: true,
   }),
   vite: {
     define: {
