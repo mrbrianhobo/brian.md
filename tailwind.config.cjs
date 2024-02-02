@@ -25,6 +25,7 @@ module.exports = {
         mono: ['"IBM Plex Mono"', ...defaultTheme.fontFamily.mono],
         code: ['"JetBrains Mono"'],
         pixel: ['Mondwest'],
+        silkscreen: ['Silkscreen'],
       },
       listStyleType: {
         bracket: '"> "',
